@@ -19,7 +19,7 @@ risk_rho <- 1.17647
 fuel_consumption <- 26.96 #L/hour
 vessel_speed <- 15 #average speed in km/hr
 diesel_price <- 0.92 #USD/L
-#distance_to_port <- will vary by cell
+distance_to_port <- 25
 num_of_boats <- 2
 trips_per_day <- 2
 trip_hours <- 6 #maximum roundtrip
@@ -32,3 +32,8 @@ farm_volume <- 102400 #m^3
 monthly_hours <- 160 #hours/fulltime employee
 num_of_employees <- 40 ##/farm
 hourly_wage <- 4.50 #USD/hour average
+
+
+# Total Variable Labor Cost
+total_labor_cost <- ((monthly_hours*num_of_employees*hourly_wage)+((distance_to_port/vessel_speed)*(trips_per_day*30)*hourly_wage*num_of_employees))
+
